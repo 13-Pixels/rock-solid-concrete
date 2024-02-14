@@ -34,9 +34,9 @@ const classes = computed(() => {
       "bg-transparent border border-primary text-primary":
         props.button?.type == "primaryOutlined",
       "bg-secondary text-white": props.button?.type == "secondary",
-      "bg-[#40A2E3] text-white": props.button?.type == "tertiary",
+      "text-primary hover:scale-105": props.button?.type == "tertiary",
       "bg-gradient-to-r from-[#BDC200] via-[#95C11F] to-[#3AAA35] text-white": props.button?.type == "gradient",
-      "text-primary hover:scale-105 ": props.button?.type == "text",
+      "text-[#8B97AA] hover:scale-105 ": props.button?.type == "text",
       "": props.button?.type == "icon",
 
       //Button Size
@@ -52,7 +52,7 @@ const classes = computed(() => {
       "h-16 w-16": props.button?.size == "lg" && props.button.type == "icon",
 
       //   button
-      "rounded-sm": props.button?.rounded == "sm",
+      "rounded-sm text-sm": props.button?.rounded == "sm",
       "rounded-md": props.button?.rounded == "md",
       "rounded-lg": props.button?.rounded == "lg",
       "rounded-xl": props.button?.rounded == "xl",

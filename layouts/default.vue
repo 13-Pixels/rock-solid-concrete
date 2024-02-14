@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageNavbar class="" />
-    <section class="mt-20">
+    <section class="mt-16 md:mt-20">
       <slot />
     </section>
     <Footer />

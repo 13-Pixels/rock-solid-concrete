@@ -28,8 +28,8 @@ const classes = computed(() => {
       "text-base": props.heading?.size == "base",
       "text-lg": props.heading?.size == "lg",
       "text-xl": props.heading?.size == "xl",
-      " text-sm sm:text-base md:text-2xl": props.heading?.size == "2xl",
-      " text-base font-semiblold sm:text-lg md:text-3xl ": props.heading?.size == "3xl",
+      " text-lg sm:text-xl md:text-2xl": props.heading?.size == "2xl",
+      " text-lg font-semiblold sm:text-xl md:text-3xl ": props.heading?.size == "3xl",
       "text-4xl font-semibold": props.heading?.size == "4xl",
       "text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold":
         props.heading?.size == "5xl",

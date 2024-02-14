@@ -1,22 +1,22 @@
 <template>
   <div class="bg-[#2F6CC8] px-4 py-10" v-editable="blok">
-    <section class="max-w-[1200px] mx-auto flex justify-between">
+    <section class="max-w-[1200px] mx-auto block md:flex justify-between">
       <StoryblokHeading
-        class="my-1.5 px-10 sm:px-3 md:px-0 sm:my-3 font-jakarta"
+        class="font-jakarta text-center md:text-left"
         v-for="heading of blok.headings"
         :heading="heading"
       />
-      <div>
-        <div>
-          <p class="ml-8 text-white text-lg font-jakarta">
+      <div class="mt-6 md:mt-0">
+        <div class=" max-w-[180px] mx-auto">
+          <p class="ml-8 text-white text-base lg:text-lg font-jakarta ">
             {{ blok.subtitle }}
           </p>
-          <div class="flex mt-3">
+          <div class="flex mt-2 lg:mt-3">
             <NuxtImg
               :src="blok.icon.filename"
-              class="h-7 w-7 mr-3 mt-1"
+              class="h-5 lg:h-7 w-5 lg:w-7 mr-3 mt-1"
             ></NuxtImg>
-            <p class="text-white font-jakarta text-3xl">
+            <p class="text-white font-jakarta lg:text-3xl md:text-2xl text-xl">
               {{ blok.phoneNumber }}
             </p>
           </div>

@@ -5,7 +5,14 @@ import { Footer } from "../types/footer";
 import { CalendarIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/solid";
 
 const navData: Ref<Footer> = useNavData();
-
+const headerItems = [
+  {title:"Home" , link:"/"},
+  {title:"About" , link:"/about"},
+  {title:"Services" , link:"/services"},
+  {title:"Products" , link:"/products"},
+  {title:"Downloads" , link:"/downloads"},
+  {title:"Contact Us" , link:"/contactUs"},
+];
 onMounted(async () => {
   await getNavData();
 });
@@ -14,7 +21,7 @@ onMounted(async () => {
 <template>
   <div v-editable="navData" v-for="value in navData?.body">
     <!-- topnav -->
-    <nav class="bg-white fixed w-full z-40 top-0 start-0 py-2">
+    <nav class="bg-[#F6F7FA] fixed w-full z-40 top-0 start-0 py-2 hidden lg:block">
       <ul class="flex font-medium text-base max-w-[420px] ml-auto items-center">
         <li class="pr-3 text-[#1E1E1E]">Place your order</li>
         <li class="px-3 text-[#1E1E1E] border-x border-[#000]">Call Us</li>
@@ -25,12 +32,12 @@ onMounted(async () => {
         </li>
       </ul>
     </nav>
-    <nav class="bg-[#2F6CC8] fixed w-full z-30 top-[40px] start-0">
+    <nav class="bg-[#2F6CC8] fixed w-full z-40 lg:top-[40px] top-0 start-0">
       <div
-        class="max-w-[1200px] flex flex-wrap items-center justify-between mx-auto py-7"
+        class="max-w-[1200px] flex flex-wrap items-center justify-between mx-auto py-4 md:py-7 px-4"
       >
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img :src="value.logo.filename" class="w-44" alt="Logo" />
+          <img :src="value.logo.filename" class="w-32 lg:w-44" alt="Logo" />
         </a>
         <div
           class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse md:hidden"
@@ -48,7 +55,7 @@ onMounted(async () => {
               viewBox="0 0 17 14"
             >
               <path
-                stroke="#000"
+                stroke="#FFF"
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
@@ -64,12 +71,12 @@ onMounted(async () => {
           <ul
             class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0"
           >
-            <li v-for="data in value.headerItems">
+            <li v-for="data in headerItems">
               <NuxtLink
                 :to="data.link"
                 class="pl-3 font-mediam text-white font-jakarta text-base"
               >
-                {{ data.label }}
+                {{ data.title }}
               </NuxtLink>
             </li>
           </ul>

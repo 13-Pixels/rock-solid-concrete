@@ -1,18 +1,18 @@
 <template>
   <div class="bg-[#2F6CC8] px-4 py-10" v-editable="blok">
-    <section class="max-w-[1200px] mx-auto flex justify-between items-center">
+    <section class="max-w-[1200px] mx-auto block md:flex justify-between items-center">
       <StoryblokHeading
-        class="my-1.5 px-10 sm:px-3 md:px-0 sm:my-3 font-jakarta max-w-[300px]"
+        class="font-jakarta max-w-[220px] md:max-w-[300px] mx-auto md:mx-0"
         v-for="heading of blok.headings"
         :heading="heading"
       />
-      <div>
-        <div class="flex items-center">
+      <div class="px-10 md:px-0 mt-6 md:mt-0">
+        <div class="block md:flex items-center">
           <NuxtImg :src="blok.image.filename" class="h-16 mr-10"></NuxtImg>
           <StoryblokBtn
             v-for="button of blok.action"
             :button="button"
-            class=" font-jakarta"
+            class=" font-jakarta max-w-[200px] mt-6 md:mt-0"
           >
           </StoryblokBtn>
         </div>

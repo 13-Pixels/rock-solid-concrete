@@ -16,7 +16,7 @@ onMounted(async () => {
   v-editable="footerData"
   class="max-w-[1200px] mx-auto px-4 py-14">
     <div class="grid grid-cols-6 gap-4" v-for="data in footerData?.body">
-      <div class="col-span-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
         <h3 class="font-jakarta text-2xl font-bold text-black mb-3">
           Areas Covered
         </h3>
@@ -26,7 +26,7 @@ onMounted(async () => {
           </NuxtLink>
         </div>
       </div>
-      <div class="col-span-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
         <h3 class="font-jakarta text-2xl font-bold text-black mb-3">Contact</h3>
         <div>
           <article class="max-w-[300px]">
@@ -46,18 +46,18 @@ onMounted(async () => {
           </article>
         </div>
       </div>
-      <div class="col-span-3 sm:col-span-6 md:col-span-3 lg:col-span-2">
+      <div class="col-span-6 md:col-span-3 lg:col-span-2">
         <h6
-          class="font-jakarta text-xl font-semibold text-black mt-8 text-center"
+          class="font-jakarta text-xl font-semibold text-black mt-8 lg:text-center"
         >
           Connect with Us
         </h6>
-        <div class="flex justify-around max-w-[170px] mx-auto mt-5">
+        <div class="flex justify-around max-w-[170px] lg:mx-auto mt-5">
           <NuxtLink v-for="value in data.links" ><NuxtImg :src="value.image.filename" class="h-10"></NuxtImg></NuxtLink>
         </div>
-        <div class="text-[#5B5B5B] font-jakarta text-base flex justify-around max-w-[350px] mx-auto mt-12">
+        <div class="text-[#5B5B5B] font-jakarta text-base block lg:flex justify-around max-w-[350px] mx-auto lg:mt-12 mt-6">
           <p>Privacy Policy</p>
-          <p>Cookie Policy</p>
+          <p class="mt-4 lg:mt-0">Cookie Policy</p>
         </div>
       </div>
     </div>
