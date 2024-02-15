@@ -27,7 +27,7 @@ const props = defineProps({
           <NuxtImg :src="blok.image2.filename" 
           class="w-[57%] absolute right-0 lg:top-[105px] md:top-[160px] top-[67px] z-10"></NuxtImg>
           <NuxtImg :src="blok.image3.filename"
-          class="w-[60%] relative lg:mt-[-135px] md:mt-[-145px] mt-[-85px] ml-4 lg:ml-6 z-30"></NuxtImg>
+          class="w-[60%] relative lg:mt-[-135px] md:mt-[-220px] mt-[-85px] ml-4 md:ml-6 z-30"></NuxtImg>
         </div>
       </div>
     </section>

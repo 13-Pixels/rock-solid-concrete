@@ -1,13 +1,13 @@
 <template>
   <div class="bg-[#2F6CC8] px-4 py-10" v-editable="blok">
-    <section class="max-w-[1200px] mx-auto block md:flex justify-between">
+    <section class="max-w-[1200px] mx-auto block md:flex justify-between items-center">
       <StoryblokHeading
         class="font-jakarta text-center md:text-left"
         v-for="heading of blok.headings"
         :heading="heading"
       />
       <div class="mt-6 md:mt-0">
-        <div class=" max-w-[180px] mx-auto">
+        <div class=" max-w-[250px] mx-auto">
           <p class="ml-8 text-white text-base lg:text-lg font-jakarta ">
             {{ blok.subtitle }}
           </p>

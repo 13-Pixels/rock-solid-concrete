@@ -16,8 +16,11 @@ const { data: story, pending } = await useAsyncData(
       `cdn/stories/${url.replace(/\/$/, "")}`,
       {
         version: isPreview ? "draft" : "published",
-        // language: locale.value,
-        // resolve_relations: resolveRelations,
+        resolve_relations: [
+        // "featuredServices.services",
+        "allServices.services",
+        // "allFleet.fleet",
+      ],
       }
     );
     return data?.story;

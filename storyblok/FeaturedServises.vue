@@ -18,7 +18,7 @@ const props = defineProps({
             :src="value.image.filename"
             class="w-[82%] mx-auto"
           ></NuxtImg>
-          <div class="bg-white p-5 pt-56 mt-[-205px]">
+          <div class="bg-white p-5 pt-52 mt-[-193px]">
             <StoryblokHeading
               class="font-jakarta text-center font-semibold"
               v-for="heading of value.headings"
