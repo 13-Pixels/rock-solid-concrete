@@ -17,10 +17,9 @@
         <!-- content column is here -->
         <div class="self-center lg:col-span-3 md:col-span-3 sm:col-span-1">
           <StoryblokHeading
-            class="font-jakarta mb-6 max-w-[450px]"
+            class="font-jakarta mb-6 max-w-[450px] fixLineHeight"
             v-for="heading of service.content.headings"
             :heading="heading"
-            :style="{ 'line-height': LineHeight }"
           />
           <p class="font-normal text-lg mt-2 font-jakarta text-textGray2 max-w-[500px]">
             {{ service.content.text }}
@@ -41,4 +40,16 @@
   defineProps({ service: Object, index: Number });
   const LineHeight = '62px'
   </script>
+
+  <style scoped>
+.fixLineHeight{
+line-height: 62px;
+}
+@media screen and (max-width: 600px) {
+  .fixLineHeight{
+line-height: 32px;
+}
+}
+</style>
+  
   

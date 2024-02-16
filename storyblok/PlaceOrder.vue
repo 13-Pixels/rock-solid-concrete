@@ -7,7 +7,7 @@
         :heading="heading"
       />
       <div class="mt-6 md:mt-0">
-        <div class=" max-w-[250px] mx-auto">
+        <div class="max-w-[180px] md:max-w-[250px] mx-auto">
           <p class="ml-8 text-white text-base lg:text-lg font-jakarta ">
             {{ blok.subtitle }}
           </p>
