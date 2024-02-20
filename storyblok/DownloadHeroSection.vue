@@ -13,8 +13,11 @@ const props = defineProps({
       />
     </section>
     <!-- application form is here -->
-    <section class="grid grid-cols-2 gap-8 max-w-[1200px] mx-auto py-16">
-      <div v-for="value in blok.applicationForm" class="shadow-lg py-7 px-6 flex items-center justify-between">
+    <section class="grid grid-cols-1 px-4 lg:grid-cols-2 gap-6 max-w-[1200px] mx-auto py-16">
+      <div
+        v-for="value in blok.applicationForm"
+        class="shadow-lg py-7 px-6 block lg:flex items-center justify-between"
+      >
         <div class="flex items-center">
           <NuxtImg :src="value.image.filename" class="w-5 h-6"></NuxtImg>
           <StoryblokHeading
@@ -24,10 +27,10 @@ const props = defineProps({
           />
         </div>
         <StoryblokBtn
-              v-for="button of value.actions"
-              :button="button"
-              class="font-jakarta"
-            />
+          v-for="button of value.actions"
+          :button="button"
+          class="font-jakarta mt-6 lg:mt-0"
+        />
       </div>
     </section>
   </div>
