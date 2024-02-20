@@ -10,7 +10,7 @@
       {{ button?.label }}
       <NuxtImg
         v-if="!!button?.icon.filename"
-        class="h-2 w-3 ml-2"
+        class="h-2 w-2.5 ml-2"
         :src="button?.icon?.filename"
       />
     </span>

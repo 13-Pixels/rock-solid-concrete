@@ -13,10 +13,10 @@ const adjustWidth = computed(() => {
 });
 </script>
 <template>
-  <div v-editable="blok">
-    <section class="py-20 lg:pt-32 px-4 bg-[#F6F7FA]">
+  <div v-editable="blok" class="bg-[#F6F7FA]">
+    <section class="py-20 lg:pt-32 px-4 max-w-[1100px] mx-auto">
       <StoryblokHeading
-        class="font-jakarta mt-4 mx-auto"
+        class="font-jakarta mt-4 mx-auto "
         v-for="heading of blok.headings"
         :heading="heading"
         :class="adjustWidth"
@@ -31,3 +31,5 @@ const adjustWidth = computed(() => {
     </section>
   </div>
 </template>
+
+
