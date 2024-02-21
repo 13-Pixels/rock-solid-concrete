@@ -7,7 +7,7 @@ const props = defineProps({
   <div v-editable="blok" class="bg-[#F6F7FA]">
     <section class="max-w-[1200px] mx-auto py-14 px-4">
       <StoryblokHeading
-        class=" font-jakarta text-center"
+        class=" font-jakarta text-center mt-2"
         v-for="heading of blok.headings"
         :heading="heading"
       />

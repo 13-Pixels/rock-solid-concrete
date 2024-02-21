@@ -2,11 +2,28 @@
 const props = defineProps({
   blok: { type: Object, default: null },
 });
-</script>  
+</script>
 <template>
-    <div v-editable="blok" class="bg-white">
-        <div class="px-4 py-16">
-            <NuxtImg :src="blok.image.filename" class="max-w-[1000px] mx-auto w-full" ></NuxtImg>
-        </div>
+  <div v-editable="blok" class="bg-white">
+    <div class="px-4 py-20">
+      <div class="flex justify-center">
+        <StoryblokHeading
+          class="font-jakarta mb-4 ml-1 mr-1"
+          v-for="heading of blok.headings"
+          :heading="heading"
+        />
+      </div>
+      <div class="flex justify-center">
+        <StoryblokHeading
+          class="font-jakarta ml-1 mr-1"
+          v-for="heading of blok.headings2"
+          :heading="heading"
+        />
+      </div>
+      <NuxtImg
+        :src="blok.image.filename"
+        class="max-w-[1000px] mx-auto w-full mt-14"
+      ></NuxtImg>
     </div>
+  </div>
 </template>

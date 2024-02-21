@@ -7,12 +7,12 @@
         :heading="heading"
       />
       <div class="px-10 md:px-0 mt-6 md:mt-0">
-        <div class="block md:flex items-center">
-          <NuxtImg :src="blok.image.filename" class="h-16 mr-10"></NuxtImg>
+        <div class="block md:flex items-center ">
+          <NuxtImg :src="blok.image.filename" class="h-16 md:mr-10 mx-auto"></NuxtImg>
           <StoryblokBtn
             v-for="button of blok.action"
             :button="button"
-            class=" font-jakarta max-w-[200px] mt-6 md:mt-0"
+            class=" font-jakarta max-w-[200px] mt-6 md:mt-0 mx-auto"
           >
           </StoryblokBtn>
         </div>

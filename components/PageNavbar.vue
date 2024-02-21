@@ -11,7 +11,7 @@ const headerItems = [
   {title:"Services" , link:"/services"},
   {title:"Products" , link:"/products"},
   {title:"Downloads" , link:"/downloads"},
-  {title:"Contact Us" , link:"/contactUs"},
+  {title:"Contact Us" , link:"/contactus"},
 ];
 onMounted(async () => {
   await getNavData();

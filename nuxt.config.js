@@ -3,6 +3,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/image",
+    'nuxt-swiper',
     "@nuxtjs/tailwindcss", '@nuxtjs/seo',
 
     [
