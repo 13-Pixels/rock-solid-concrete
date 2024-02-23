@@ -21,6 +21,7 @@ const modules = [Navigation, Pagination];
         :slidesPerView="'auto'"
         :pagination="{ clickable: true }"
         :spaceBetween="25"
+        :loop="true"
         :modules="modules"
       >
         <div class="parallax-slider-navigation cursor-pointer hidden md:block">
