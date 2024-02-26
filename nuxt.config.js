@@ -27,7 +27,7 @@ export default defineNuxtConfig({
 
   site: {
     url: process.env.URL,
-    name: 'Website Name',
+    name: 'Rock Solid Concrete',
     description: 'Website Description',
     defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
   },

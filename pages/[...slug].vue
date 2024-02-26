@@ -17,7 +17,7 @@ const { data: story, pending } = await useAsyncData(
       {
         version: isPreview ? "draft" : "published",
         resolve_relations: [
-        // "featuredServices.services",
+        "featuredServises.services",
         "allServices.services",
         // "allFleet.fleet",
       ],
@@ -44,7 +44,7 @@ onMounted(async () => {
 });
 
 useSeoMeta({
-  title: "Website Title",
+  title: "Rock Solid Concrete",
   description: "Website Description",
   ogTitle: "Website OG Title",
   ogDescription: "Website OG Description",

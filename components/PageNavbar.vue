@@ -5,17 +5,17 @@ import { Footer } from "../types/footer";
 import { CalendarIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/solid";
 
 const navData: Ref<Footer> = useNavData();
-const headerItems = [
-  {title:"Home" , link:"/"},
-  {title:"About" , link:"/about"},
-  {title:"Services" , link:"/services"},
-  {title:"Products" , link:"/products"},
-  {title:"Downloads" , link:"/downloads"},
-  {title:"Contact Us" , link:"/contactus"},
-];
+
 onMounted(async () => {
   await getNavData();
 });
+
+const isToggled = ref(false);
+
+const toggle = () => {
+  isToggled.value = !isToggled.value;
+};
+
 </script>
 
 <template>
@@ -32,6 +32,7 @@ onMounted(async () => {
         </li>
       </ul>
     </nav>
+    <!-- navbar for desktop -->
     <nav class="bg-[#2F6CC8] fixed w-full z-40 lg:top-[40px] top-0 start-0">
       <div
         class="max-w-[1200px] flex flex-wrap items-center justify-between mx-auto py-4 md:py-7 px-4"
@@ -45,7 +46,8 @@ onMounted(async () => {
           <button
             type="button"
             class="inline-flex items-center p-2 w-10 h-10 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2"
-          >
+            @click="toggle"
+            >
             <span class="sr-only">Open main menu</span>
             <svg
               class="w-5 h-5"
@@ -71,18 +73,37 @@ onMounted(async () => {
           <ul
             class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0"
           >
-            <li v-for="data in headerItems">
+            <li v-for="link of value?.headerItems">
               <NuxtLink
-                :to="data.link"
+              :to="link.link?.story?.url ? link.link.story.url : '/'"
                 class="pl-3 font-mediam text-white font-jakarta text-base"
               >
-                {{ data.title }}
+              {{ link.label }}
               </NuxtLink>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!-- mobile navbar -->
+    <div
+      class="w-full h-full fixed z-20 pt-10 top-[60px] bg-[#2F6CC8] md:hidden sm:block"
+      v-if="isToggled"
+    >
+      <div class="px-4">
+        <ul class="py-4 font-medium rounded-lg">
+          <li v-for="link of value?.headerItems">
+              <NuxtLink
+              :to="link.link?.story?.url"
+                class="hover:underline text-center pl-3 font-mediam text-white font-jakarta text-base rounded-lg block py-2 px-3 md:p-0"
+                @click="toggle"
+              >
+              {{ link.label }}
+              </NuxtLink>
+            </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
