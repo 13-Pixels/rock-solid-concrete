@@ -31,7 +31,7 @@ const props = defineProps({
           <div v-for="value in blok.time" class="">
             <div class="flex mt-2">
               <NuxtImg :src="value.image.filename" class="w-5 h-5 mt-1 mr-3"></NuxtImg>
-              <div class="flex items-center gap-10">
+              <div class="flex items-center gap-4 max-w-[320px] md:gap-10 md:max-w-[340px]">
                 <StoryblokHeading
                   class="font-jakarta"
                   v-for="heading of value.headings"

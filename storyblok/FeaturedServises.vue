@@ -27,7 +27,7 @@ const modules = [Navigation, Pagination];
         :loop="true"
         :spaceBetween="20"
         :modules="modules"
-        class="w-[100%] h-[100%] relative"
+        class="w-full relative px-16"
         :breakpoints="{ 
           768: { slidesPerView: 1 }, // 1 slide on screens less than 768px
           1024: { slidesPerView: 3 }, // 3 slides on screens 768px and above
