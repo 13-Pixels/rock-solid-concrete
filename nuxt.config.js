@@ -22,7 +22,12 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       NODE_ENV: process.env.NODE_ENV,
-    },
+      RESEND_API_KEY: process.env.RESEND_API_KEY,
+      FROM_EMAIL: process.env.FROM_EMAIL,
+      TO_EMAIL: process.env.TO_EMAIL,
+      SUBJECT: process.env.SUBJECT,
+      REPLY_TO_EMAIL: process.env.REPLY_TO_EMAIL
+    }
   },
 
   site: {

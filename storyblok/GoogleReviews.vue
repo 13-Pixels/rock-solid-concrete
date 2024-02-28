@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-editable="blok"
-    class="max-w-[1200px] mx-auto py-28 px-4"
-  >
+  <div v-editable="blok" class="max-w-[1200px] mx-auto py-24 px-4">
     <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5">
       <div class="self-center">
         <NuxtImg
@@ -23,10 +20,10 @@
           class="mx-auto"
         />
         <StoryblokHeading
-            class="font-jakarta text-center font-semibold mt-3"
-            v-for="heading of blok.headings"
-            :heading="heading"
-          />
+          class="font-jakarta text-center font-semibold mt-3"
+          v-for="heading of blok.headings"
+          :heading="heading"
+        />
         <p
           class="text-[#6D6D6D] text-center font-jakarta text-sm font-normal mt-2"
         >
@@ -34,12 +31,15 @@
           <span class="text-[#2F2F2F] font-semibold">{{ blok.text2 }}</span>
         </p>
         <StoryblokBtn
-            v-for="button of blok.actions"
-            :button="button"
-            class="max-w-[150px] font-jakarta mt-4 mx-auto"
+          v-for="button of blok.actions"
+          :button="button"
+          class="max-w-[150px] font-jakarta mt-4 mx-auto"
         ></StoryblokBtn>
       </div>
-      <div v-for="review in limitedReviews" class="bg-white rounded-xl p-4 relative border">
+      <div
+        v-for="review in limitedReviews"
+        class="bg-white rounded-xl p-4 relative border"
+      >
         <div class="flex items-center mb-3">
           <NuxtImg
             v-if="review.profile_photo_url"
@@ -58,15 +58,25 @@
             </p>
           </div>
         </div>
-        <span v-for="star in review.rating" :key="star" class="text-[#f6bb06] text-3xl mr-1.5">&#9733;</span>
+        <span
+          v-for="star in review.rating"
+          :key="star"
+          class="text-[#f6bb06] text-3xl mr-1.5"
+          >&#9733;</span
+        >
         <p class="text-[#464646] text-base font-jakarta font-normal mt-3 pb-8">
-          <div v-if="review.text">
-            {{ review.text }}
-          </div>
-          <div v-else>Fantastic service the driver was very helpful and we got the job done in time 
-            I would recommend this company to you....</div>
+          <template v-if="review.text">
+            {{truncateText(review.text, 20)}}
+          </template>
+          <template v-else
+            >Fantastic service the driver was very helpful and we got the job
+            done in time I would recommend this company to you....
+          </template>
         </p>
-        <NuxtLink :to="review.author_url" class="text-base font-jakarta font-medium absolute bottom-4 text-[#FF6C2B]">
+        <NuxtLink
+          :to="review.author_url"
+          class="text-base font-jakarta font-medium absolute bottom-4 text-[#FF6C2B]"
+        >
           read more
         </NuxtLink>
       </div>
@@ -84,4 +94,13 @@ onMounted(async () => {
   reviewsData.value = res.result.reviews;
   console.log("response", limitedReviews);
 });
+
+function truncateText(text, maxWords){
+      const words = text.split(' ');
+      if (words.length > maxWords) {
+        return words.slice(0, maxWords).join(' ') + '...';
+      } else {
+        return text;
+      }
+    }
 </script>

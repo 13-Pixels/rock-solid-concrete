@@ -29,7 +29,7 @@
       />
       <input
         v-model="postalRef"
-        type="text"
+        type="number"
         class="border px-4 py-2 w-full rounded mt-3 font-jakarta text-textGray1"
         :placeholder="form.postalCode"
         required
@@ -176,18 +176,18 @@ const submitForm = async () => {
   // Validate that required fields are not null
   if (name && phone && email && postal && meters && length && width && depth && amount && garden && pump && google) {
     const htmlContent = `
-      <p>Name: ${name}</p>
-      <p>Phone: ${phone}</p>
-      <p>Email: ${email}</p>
-      <p>Postal: ${postal}</p>
-      <p>Meters: ${meters}</p>
-      <p>Length: ${length}</p>
-      <p>Width: ${width}</p>
-      <p>Depth: ${depth}</p>
-      <p>Amount: ${amount}</p>
-      <p>Garden: ${garden}</p>
-      <p>Pump: ${pump}</p>
-      <p>Google: ${google}</p>
+      <p>Name : ${name}</p>
+      <p>Phone : ${phone}</p>
+      <p>Email : ${email}</p>
+      <p>ZIP / Postal Code : ${postal}</p>
+      <p>Meters : ${meters}</p>
+      <p>Length : ${length}</p>
+      <p>Width : ${width}</p>
+      <p>Depth : ${depth}</p>
+      <p>Amount Of Concrete : ${amount}</p>
+      <p>What are you using the concrete for? : ${garden}</p>
+      <p>Do you require a pump? : ${pump}</p>
+      <p>How did you hear about us? : ${google}</p>
     `;
 
     const body = {
