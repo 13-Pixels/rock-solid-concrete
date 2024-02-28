@@ -42,11 +42,13 @@ function toggleFAQ(index) {
               class="flex justify-between items-center mb-3 cursor-pointer" 
               @click="toggleFAQ(index)"
             >
+            <!-- heading is here -->
               <StoryblokHeading
                 class="font-jakarta font-semibold"
                 v-for="heading of item.headings"
                 :heading="heading"
               />
+              <!-- icon is here -->
               <div>
                 <template v-if="isOpen(index)">
                   <NuxtImg :src="item.image.filename" class="w-2.5"> </NuxtImg>
@@ -56,6 +58,7 @@ function toggleFAQ(index) {
                 </template>
               </div>
             </div>
+            <!-- description text is here -->
             <p
               v-if="isOpen(index)"
               class="font-normal text-sm md:text-base mt-3 font-jakarta text-[#595959] border-t pt-3"

@@ -5,8 +5,10 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok" class="bg-[#F6F7FA] lg:pt-20 pt-10">
+    <!-- About page hero section is here -->
     <section class="max-w-[1200px] mx-auto py-14 px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <!-- content section -->
         <div class="self-center">
           <StoryblokHeading
             class="font-jakarta"
@@ -22,6 +24,7 @@ const props = defineProps({
               class="max-w-[150px] font-jakarta mt-6"
             />
         </div>
+        <!-- images section -->
         <div class="relative">
           <NuxtImg :src="blok.image1.filename" class="w-[69%] relative z-20"></NuxtImg>
           <NuxtImg :src="blok.image2.filename" 

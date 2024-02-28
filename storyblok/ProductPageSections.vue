@@ -42,8 +42,8 @@ const props = defineProps({
       </div>
       <!-- two type card in one row -->
       <div class="block md:flex px-4">
+        <!-- following cards -->
         <div class="md:w-[50%]">
-          <!-- following cards -->
           <StoryblokHeading
             class="font-jakarta font-semibold mt-14"
             v-for="heading of blok.followCardHeading"
@@ -74,8 +74,8 @@ const props = defineProps({
             </div>
           </div>
         </div>
+         <!-- screed cards -->
         <div class="md:w-[50%]">
-          <!-- screed cards -->
           <StoryblokHeading
             class="font-jakarta font-semibold mt-14"
             v-for="heading of blok.screedCardHeading"

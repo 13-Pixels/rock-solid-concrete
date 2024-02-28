@@ -5,16 +5,19 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok">
+    <!-- Rockflow – Constituents and Design Project (content) section -->
     <section class="py-20 px-4 bg-[#F6F7FA]">
       <div
         class="flex flex-col gap-20 lg:flex-row md:max-w-[1110px] md:mx-auto items-center"
       >
+      <!-- image colimn is here -->
         <div class="lg:min-w-[425px]">
           <NuxtImg
             :src="blok.image.filename"
             class="w-full lg:h-[500px]"
           ></NuxtImg>
         </div>
+        <!-- content column is here -->
         <div>
           <StoryblokHeading
             class="font-jakarta mb-7"

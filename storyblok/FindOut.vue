@@ -1,5 +1,6 @@
 <template>
   <div class="bg-[#2F6CC8] px-4 py-10" v-editable="blok">
+    <!-- find out section is here -->
     <section class="max-w-[1200px] mx-auto block md:flex justify-between items-center">
       <StoryblokHeading
         class="font-jakarta max-w-[170px] md:max-w-[300px] mx-auto md:mx-0"

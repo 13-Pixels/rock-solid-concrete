@@ -4,7 +4,6 @@
       <div class="self-center">
         <NuxtImg
           v-if="blok.image.filename"
-          sizes=""
           :src="blok.image.filename"
           :alt="blok.image.alt"
           width="150"
@@ -36,6 +35,7 @@
           class="max-w-[150px] font-jakarta mt-4 mx-auto"
         ></StoryblokBtn>
       </div>
+      <!-- google review cards is here -->
       <div
         v-for="review in limitedReviews"
         class="bg-white rounded-xl p-4 relative border"

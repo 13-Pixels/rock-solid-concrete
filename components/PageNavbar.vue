@@ -26,7 +26,7 @@ const toggle = () => {
         <li class="pr-3 text-[#1E1E1E]">Place your order</li>
         <li class="px-3 text-[#1E1E1E] border-x border-[#000]">Call Us</li>
         <li class="pl-3 text-primary">
-          <NuxtLink class="flex items-center">
+          <NuxtLink :to="`tel:${value.phoneNumber}`" class="flex items-center">
             <nuxtImg :src="value.icon.filename" class="w-4 h-4 mr-1"></nuxtImg>{{ value.phoneNumber }}
           </NuxtLink>
         </li>

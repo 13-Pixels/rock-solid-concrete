@@ -6,6 +6,7 @@ const props = defineProps({
 <template>
   <div v-editable="blok" class="bg-white">
     <div class="px-4 py-20">
+      <!-- headings is here -->
       <div class="flex justify-center">
         <StoryblokHeading
           class="font-jakarta mb-4 ml-1 mr-1"
@@ -20,6 +21,7 @@ const props = defineProps({
           :heading="heading"
         />
       </div>
+      <!-- image is here -->
       <NuxtImg
         :src="blok.image.filename"
         class="max-w-[1000px] mx-auto w-full mt-14"

@@ -5,12 +5,14 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok">
+    <!-- Conditions of Sale and Delivery (content) section is here -->
     <section class="pt-20 pb-6 px-4 max-w-[1100px] mx-auto">
       <StoryblokHeading
         class="font-jakarta mt-4 mx-auto mb-16"
         v-for="heading of blok.headings"
         :heading="heading"
       />
+      <!-- first list -->
       <div v-for="value in blok.list" class="mt-8">
         <StoryblokHeading
           class="font-jakarta mt-4 mx-auto font-semibold"

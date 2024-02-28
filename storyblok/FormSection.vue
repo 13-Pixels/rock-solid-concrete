@@ -5,6 +5,7 @@
       v-for="heading of form.headings"
       :heading="heading"
     />
+    <!-- contact form is here -->
     <form @submit.prevent="submitForm">
       <input
         v-model="nameRef"

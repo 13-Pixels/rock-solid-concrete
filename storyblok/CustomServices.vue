@@ -3,11 +3,11 @@
     class="pt-10 pb-4 relative h-full bg-[#F6F7FA]"
     :class="{ 'bg-white': index % 2 !== 1 }"
   >
-    <!-- :class="{ 'lg:flex-row-reverse': index % 2 !== 0  }" -->
     <div
       class="flex flex-col gap-20 py-14 mx-4 lg:flex-row md:max-w-[1200px] md:mx-auto"
       :class="{ 'lg:flex-row-reverse': index % 2 !== 1 }"
     >
+      <!-- image column is here -->
       <div class="mb-4 lg:min-w-[570px]">
         <NuxtImg
           :src="service.content.image.filename"

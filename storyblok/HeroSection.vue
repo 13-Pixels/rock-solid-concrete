@@ -11,11 +11,11 @@ import { Navigation , Pagination } from "swiper/modules";
 
 const modules = [Navigation, Pagination];
 
-// Import pagination styles
 </script>
 <template>
   <div v-editable="blok">
     <section>
+      <!-- hero section slider is here -->
       <swiper
         :navigation="{ nextEl: '.nextArrow', prevEl: '.prevArrow' }"
         :slidesPerView="'auto'"
@@ -24,6 +24,7 @@ const modules = [Navigation, Pagination];
         :loop="true"
         :modules="modules"
       >
+      <!-- prev and next icons -->
         <div class="parallax-slider-navigation cursor-pointer hidden md:block">
           <div class="nav-indicator prevArrow">
             <NuxtImg

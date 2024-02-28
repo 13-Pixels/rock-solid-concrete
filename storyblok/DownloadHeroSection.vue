@@ -5,6 +5,7 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok">
+    <!-- hero section -->
     <section class="py-20 lg:pt-32 px-4 bg-[#F6F7FA]">
       <StoryblokHeading
         class="font-jakarta mt-4 max-w-[960px] mx-auto fixLineHeight"
@@ -26,6 +27,7 @@ const props = defineProps({
             :heading="heading"
           />
         </div>
+        <!-- download button is here -->
         <StoryblokBtn
           v-for="button of value.actions"
           :button="button"

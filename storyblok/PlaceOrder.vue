@@ -1,5 +1,6 @@
 <template>
   <div class="bg-[#2F6CC8] px-4 py-10" v-editable="blok">
+    <!-- place order section is here -->
     <section class="max-w-[1200px] mx-auto block md:flex justify-between items-center">
       <StoryblokHeading
         class="font-jakarta text-center md:text-left"
@@ -16,9 +17,9 @@
               :src="blok.icon.filename"
               class="h-5 lg:h-7 w-5 lg:w-7 mr-3 mt-1"
             ></NuxtImg>
-            <p class="text-white font-jakarta lg:text-3xl md:text-2xl text-xl">
+            <NuxtLink :to="`tel:${blok.phoneNumber}`" class="text-white font-jakarta lg:text-3xl md:text-2xl text-xl">
               {{ blok.phoneNumber }}
-            </p>
+            </NuxtLink>
           </div>
         </div>
       </div>

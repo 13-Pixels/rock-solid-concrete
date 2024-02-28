@@ -24,10 +24,9 @@ const modules = [Navigation, Pagination];
         :navigation="{ nextEl: '.nextArrow', prevEl: '.prevArrow' }"
         
         :pagination="{ clickable: true }"
-        :loop="true"
-        :spaceBetween="20"
+        :spaceBetween="25"
         :modules="modules"
-        class="w-full relative px-16"
+        class="w-full relative px-6"
         :breakpoints="{ 
           768: { slidesPerView: 1 }, // 1 slide on screens less than 768px
           1024: { slidesPerView: 3 }, // 3 slides on screens 768px and above
@@ -73,7 +72,7 @@ const modules = [Navigation, Pagination];
           </div>
         </swiper-slide>
       </swiper>
-
+      <!-- button is here -->
       <StoryblokBtn
         v-for="button of blok.actions"
         :button="button"

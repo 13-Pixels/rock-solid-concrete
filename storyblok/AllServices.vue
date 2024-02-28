@@ -5,6 +5,7 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok">
+    <!-- All services from CustomServices component -->
     <CustomServices v-for="(service , index) in blok.services" :service="service" :index="index" :key="index" />
   </div>
 </template>

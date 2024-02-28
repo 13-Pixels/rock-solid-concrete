@@ -7,6 +7,7 @@ const props = defineProps({
   <div v-editable="blok" class="bg-[#F6F7FA]">
     <section class="max-w-[1200px] mx-auto py-14 px-4">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <!-- images section -->
         <div class="relative">
           <NuxtImg :src="blok.image1.filename" class="w-[69%] relative z-20"></NuxtImg>
           <NuxtImg :src="blok.image2.filename" 
@@ -14,6 +15,7 @@ const props = defineProps({
           <NuxtImg :src="blok.image3.filename"
           class="w-[60%] relative lg:mt-[-135px] md:mt-[-185px] mt-[-85px] ml-4 md:ml-6 z-30"></NuxtImg>
         </div>
+        <!-- content section -->
         <div class="self-center">
           <StoryblokHeading
             class="font-jakarta mb-6"
