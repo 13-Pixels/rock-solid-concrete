@@ -66,7 +66,7 @@
         >
         <p class="text-[#464646] text-base font-jakarta font-normal mt-3 pb-8">
           <template v-if="review.text">
-            {{truncateText(review.text, 20)}}
+            {{truncateText(review.text, 24)}}
           </template>
           <template v-else
             >Fantastic service the driver was very helpful and we got the job
