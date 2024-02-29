@@ -35,7 +35,7 @@ onMounted(async () => {
             </NuxtLink>
           </article>
           <article class="mt-2">
-            <NuxtLink class="text-[#5B5B5B] font-jakarta text-xl">
+            <NuxtLink :to="`tel:${data.phoneNumber}`" class="text-[#5B5B5B] font-jakarta text-xl">
               {{ data.phoneNumber }}
             </NuxtLink>
           </article>

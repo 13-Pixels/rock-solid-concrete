@@ -6,7 +6,7 @@
     <NuxtLink
       v-if="button?.type != 'icon'"
       class="flex gap-0 items-center justify-center"
-      :to="button.link.cached_url"
+      :to="button?.link.cached_url"
     >
       {{ button?.label }}
       <NuxtImg
