@@ -13,7 +13,7 @@ const modules = [Navigation, Pagination];
 </script>
 <template>
   <div v-editable="blok" class="bg-[#F6F7FA]">
-    <section class="max-w-[1260px] mx-auto py-14 px-4">
+    <section class="max-w-[1260px] mx-auto py-14 px-4 relative">
       <StoryblokHeading
         class="font-jakarta text-center mt-2"
         v-for="heading of blok.headings"
@@ -28,7 +28,7 @@ const modules = [Navigation, Pagination];
         :loop="true"
         :centeredSlides="true"
         class="w-full relative"
-        :breakpoints="{ 
+        :breakpoints="{
           768: { slidesPerView: 1 }, // 1 slide on screens less than 768px
           1024: { slidesPerView: 3 }, // 3 slides on screens 768px and above
         }"
@@ -52,11 +52,11 @@ const modules = [Navigation, Pagination];
         <swiper-slide
           v-for="value in blok.services"
           :key="value.title"
-          class="py-14 md:pb-28 px-4 md:px-10"
+          class="py-14 md:pb-20 px-4 md:px-10 max-w-[33%]"
         >
           <NuxtImg
             :src="value.content.image.filename"
-            class="w-[82%] mx-auto "
+            class="w-[82%] mx-auto"
           ></NuxtImg>
           <div class="bg-white p-5 pt-52 mt-[-193px] card-body">
             <StoryblokHeading
@@ -67,7 +67,7 @@ const modules = [Navigation, Pagination];
             <StoryblokBtn
               v-for="button of value.content.actions"
               :button="button"
-              class="max-w-[180px] font-jakarta mx-auto mt-3"
+              class="max-w-[180px] font-jakarta mx-auto mt-3 btn"
             >
             </StoryblokBtn>
           </div>
@@ -77,7 +77,7 @@ const modules = [Navigation, Pagination];
       <StoryblokBtn
         v-for="button of blok.actions"
         :button="button"
-        class="max-w-[180px] font-jakarta mt-6 md:mt-[-42px] md:mr-[32%] mx-auto"
+        class="max-w-[162px] font-jakarta mt-5 mx-auto"
       >
       </StoryblokBtn>
     </section>
@@ -85,25 +85,28 @@ const modules = [Navigation, Pagination];
 </template>
 <style scoped>
 ::v-deep .swiper-pagination-bullet {
-width: 11px;
-height: 11px;
-margin-right: 8px !important;
+  width: 11px;
+  height: 11px;
+  margin-right: 8px !important;
 }
 ::v-deep .swiper-pagination-bullet-active {
-background-color: #FF6C2B !important ; /* Replace with your desired color */
+  background-color: #ff6c2b !important ; /* Replace with your desired color */
 }
 ::v-deep .swiper-pagination {
-  margin-left: -50px;
   margin-bottom: 0px;
 }
 
-.swiper-slide-active .card-body{
+.swiper-slide-active .card-body {
   box-shadow: 0px 10px 20px 0px #ddd !important;
 }
-@media screen and (max-width:780px){
-  ::v-deep .swiper-pagination {
-  margin-left: 0px;
- 
+.swiper-slide-active .card-body .btn {
+  filter: contrast(2.5) !important;
+  color: #2f6cc8af;
 }
+
+@media screen and (max-width: 780px) {
+  ::v-deep .swiper-pagination {
+    margin-left: 0px;
+  }
 }
 </style>

@@ -3,9 +3,10 @@
     :class="classes"
     class="cursor-pointer transition-all duration-500 capitalize"
   >
-    <span
+    <NuxtLink
       v-if="button?.type != 'icon'"
       class="flex gap-0 items-center justify-center"
+      :to="button.link.cached_url"
     >
       {{ button?.label }}
       <NuxtImg
@@ -13,7 +14,7 @@
         class="h-2 w-2.5 ml-2"
         :src="button?.icon?.filename"
       />
-    </span>
+    </NuxtLink>
     <NuxtImg v-else :src="button?.icon.filename" />
   </div>
 </template>
