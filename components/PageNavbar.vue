@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, Ref } from "vue";
 import { getNavData, useNavData } from "../composables/storyblok";
+import { storyblokLink } from "../utils/storyblokLink";
 import { Footer } from "../types/footer";
 import { CalendarIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/vue/24/solid";
 
@@ -75,7 +76,7 @@ const toggle = () => {
           >
             <li v-for="link of value?.headerItems">
               <NuxtLink
-              :to="link.link?.story?.url ? link.link.story.url : '/'"
+              :to="storyblokLink(link.link.story.url)"
                 class="pl-3 font-mediam text-white font-jakarta text-base"
               >
               {{ link.label }}
