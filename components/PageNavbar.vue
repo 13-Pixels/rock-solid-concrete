@@ -88,7 +88,7 @@ const toggle = () => {
     </nav>
     <!-- mobile navbar -->
     <div
-      class="w-full h-full fixed z-20 pt-10 top-[60px] bg-[#2F6CC8] md:hidden sm:block"
+      class="w-full h-full fixed z-40 pt-10 top-[60px] bg-[#2F6CC8] md:hidden sm:block"
       v-if="isToggled"
     >
       <div class="px-4">
