@@ -46,7 +46,7 @@ const submitForm = () => {
               <StoryblokHeading
                 class="font-jakarta font-semibold opacity-80"
                 :class="{
-                  'text-primary opacity-100': activeTab === index,
+                  'text-primary opacity-[9.9]': activeTab === index,
                   'mr-2': index < blok.tabs.length - 1,
                 }"
                 v-for="heading of tab.headings"
