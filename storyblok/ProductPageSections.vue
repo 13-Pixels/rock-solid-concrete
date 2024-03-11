@@ -24,7 +24,13 @@ const props = defineProps({
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] px-4 mx-auto mt-9"
       >
         <div v-for="value of blok.houseCards" class="shadow-lg">
-          <nuxtImg :src="value.image.filename" class="w-full"></nuxtImg>
+          <nuxtImg
+            v-if="value.image.filename"
+            format="webp"
+            quality="100"
+            :src="value.image.filename"
+            class="w-full"
+          ></nuxtImg>
           <div class="p-5">
             <StoryblokHeading
               class="font-jakarta font-semibold"
@@ -55,7 +61,13 @@ const props = defineProps({
               v-for="value of blok.followCards"
               class="shadow-lg md:max-w-[370px]"
             >
-              <nuxtImg :src="value.image.filename" class="w-full"></nuxtImg>
+              <nuxtImg
+                v-if="value.image.filename"
+                format="webp"
+                quality="100"
+                :src="value.image.filename"
+                class="w-full"
+              ></nuxtImg>
               <div class="p-5">
                 <StoryblokHeading
                   class="font-jakarta font-semibold"
@@ -74,7 +86,7 @@ const props = defineProps({
             </div>
           </div>
         </div>
-         <!-- screed cards -->
+        <!-- screed cards -->
         <div class="md:w-[50%]">
           <StoryblokHeading
             class="font-jakarta font-semibold mt-14"
@@ -87,7 +99,13 @@ const props = defineProps({
               v-for="value of blok.screedCards"
               class="shadow-lg md:max-w-[370px]"
             >
-              <nuxtImg :src="value.image.filename" class="w-full"></nuxtImg>
+              <nuxtImg
+                v-if="value.image.filename"
+                format="webp"
+                quality="100"
+                :src="value.image.filename"
+                class="w-full"
+              ></nuxtImg>
               <div class="p-5">
                 <StoryblokHeading
                   class="font-jakarta font-semibold"
@@ -118,7 +136,13 @@ const props = defineProps({
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] px-4 mx-auto mt-9"
       >
         <div v-for="value of blok.specialCards" class="shadow-lg">
-          <nuxtImg :src="value.image.filename" class="w-full"></nuxtImg>
+          <nuxtImg
+            v-if="value.image.filename"
+            format="webp"
+            quality="100"
+            :src="value.image.filename"
+            class="w-full"
+          ></nuxtImg>
           <div class="p-5">
             <StoryblokHeading
               class="font-jakarta font-semibold"

@@ -10,9 +10,12 @@ const props = defineProps({
       <div
         class="flex flex-col gap-20 lg:flex-row md:max-w-[1110px] md:mx-auto md:items-center"
       >
-      <!-- image colimn is here -->
+        <!-- image colimn is here -->
         <div class="lg:min-w-[425px]">
           <NuxtImg
+            v-if="blok.image.filename"
+            format="webp"
+            quality="100"
             :src="blok.image.filename"
             class="w-full lg:h-[500px]"
           ></NuxtImg>
@@ -26,7 +29,9 @@ const props = defineProps({
           />
           <p class="font-jakarta text-base text-[#576A89]">{{ blok.text }}</p>
           <ul v-for="value in blok.list" class="list-disc ml-4 mt-4">
-            <li class="font-jakarta text-base text-[#444850]">{{ value.text1 }}</li>
+            <li class="font-jakarta text-base text-[#444850]">
+              {{ value.text1 }}
+            </li>
           </ul>
         </div>
       </div>

@@ -23,9 +23,17 @@ const classBg = computed(() => {
       />
     </section>
     <!-- service cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] px-4 mx-auto mt-14">
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] px-4 mx-auto mt-14"
+    >
       <div v-for="value in blok.cards" class="shadow-lg">
-        <nuxtImg :src="value.image.filename" class="w-full"></nuxtImg>
+        <nuxtImg
+          v-if="value.image.filename"
+          format="webp"
+          quality="100"
+          :src="value.image.filename"
+          class="w-full"
+        ></nuxtImg>
         <div class="p-5">
           <StoryblokHeading
             class="font-jakarta font-semibold"
@@ -37,9 +45,9 @@ const classBg = computed(() => {
             v-for="button of value.actions"
             :button="button"
             class="max-w-[120px] h-10 pt-2 font-jakarta mt-4"
-        ></StoryblokBtn>
+          ></StoryblokBtn>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
