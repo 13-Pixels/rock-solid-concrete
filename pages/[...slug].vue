@@ -98,14 +98,14 @@ let story, pending;
 })();
 // definePageMeta({ layout: "default" });
 
-// onMounted(async () => {
-//   if (isPreview && story && story.value && story.value.id) {
-//     alert("hh");
-//     useStoryblokBridge(story.value.id, (evStory) => (story.value = evStory), {
-//       resolveRelations,
-//     });
-//   }
-// });
+onMounted(async () => {
+  if (isPreview && story && story.value && story.value.id) {
+    alert("hh");
+    useStoryblokBridge(story.value.id, (evStory) => (story.value = evStory), {
+      resolveRelations,
+    });
+  }
+});
 </script>
 
 <template>
