@@ -66,7 +66,8 @@ const url = slug && slug.length > 0 ? slug.join("/") : "home";
 const isPreview = useRuntimeConfig().public.NODE_ENV !== "production";
 
 // const { locale } = useI18n();
-const resolveRelations = ["featuredServises.services", "allServices.services"];
+const resolveRelations = ["featuredServises.services", "allServices.services",
+ "featuredOurServices.services", "featuredProducts.products", "featuredSpecialistProducts.products"];
 const show = ref(true);
 
 let story, pending;
