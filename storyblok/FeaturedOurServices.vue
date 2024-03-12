@@ -1,7 +1,16 @@
 <template>
   <div v-editable="blok">
+    <!-- heading section -->
+    <section class="py-14 lg:pt-20 px-4" :class="classBg">
+      <StoryblokHeading
+        class="font-jakarta mt-4 max-w-[620px] mx-auto"
+        v-for="heading of blok.headings"
+        :heading="heading"
+      />
+    </section>
+    <!-- services card section -->
     <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] px-4 mx-auto mt-14"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] px-4 mx-auto"
     >
       <article v-for="value in blok.services" class="shadow-lg">
         <nuxtImg

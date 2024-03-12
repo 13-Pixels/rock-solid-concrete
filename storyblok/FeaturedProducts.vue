@@ -3,12 +3,12 @@
         <!-- housing heading -->
         <StoryblokHeading
         class="font-jakarta font-semibold px-4 mt-14"
-        v-for="heading of blok.housingHeading"
+        v-for="heading of blok.headings"
         :heading="heading"
       />
       <div class="w-[70px] h-[3px] bg-primary mt-3 ml-4"></div>  
       <section
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-14"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-9"
       >
         <article v-for="value in blok.products" class="shadow-lg">
           <nuxtImg
