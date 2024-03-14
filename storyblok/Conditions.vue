@@ -6,7 +6,7 @@ const props = defineProps({
 <template>
   <div v-editable="blok">
     <!-- Conditions of Sale and Delivery (content) section is here -->
-    <section class="pt-20 pb-6 px-4 max-w-[1100px] mx-auto">
+    <section class="pt-6 pb-6 px-4 max-w-[1100px] mx-auto">
       <StoryblokHeading
         class="font-jakarta mt-4 mx-auto mb-16"
         v-for="heading of blok.headings"
