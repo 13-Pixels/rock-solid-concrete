@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok" class="py-20 px-4">
-    <select
+    <section
       class="flex flex-col gap-20 lg:flex-row md:max-w-[1110px] md:mx-auto md:items-center"
     >
       <!-- content column is here -->
@@ -33,6 +33,6 @@ const props = defineProps({
           class="w-full lg:h-[500px]"
         ></NuxtImg>
       </article>
-    </select>
+    </section>
   </div>
 </template>
