@@ -17,7 +17,7 @@ const props = defineProps({
     <section
       class="grid grid-cols-1 px-4 lg:grid-cols-2 gap-6 max-w-[1200px] mx-auto py-16"
     >
-      <div
+      <article
         v-for="value in blok.applicationForm"
         class="py-7 px-6 block lg:flex items-center justify-between shadow-[0_5px_30px_-15px_rgba(0,0,0,0.3)]"
       >
@@ -48,7 +48,7 @@ const props = defineProps({
             :src="button?.icon?.filename"
           />
         </NuxtLink>
-      </div>
+      </article>
     </section>
   </div>
 </template>
