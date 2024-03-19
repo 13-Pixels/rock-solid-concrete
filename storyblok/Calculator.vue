@@ -52,8 +52,8 @@ const submitForm = () => {
                   'text-primary opacity-[9.9]': activeTab === index,
                   'mr-2': index < blok.tabs.length - 1,
                 }"
-                v-for="(heading, index) of tab.headings"
-                :key="index"
+                v-for="heading of tab.headings"
+                :key="heading.label"
                 :heading="heading"
               />
             </div>

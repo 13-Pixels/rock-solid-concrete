@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { storyblokHeroSection } from "../types/heroSection";
+import { PropType } from "vue";
 const props = defineProps({
-  blok: { type: Object, default: null },
+  blok: { type: Object as PropType<storyblokHeroSection>, default: null },
 });
 
 import { Swiper, SwiperSlide } from "swiper/vue";
