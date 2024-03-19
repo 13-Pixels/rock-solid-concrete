@@ -24,7 +24,9 @@ const modules = [Navigation, Pagination];
         :modules="modules"
       >
         <!-- prev and next icons -->
-        <section class="parallax-slider-navigation cursor-pointer hidden md:block">
+        <section
+          class="parallax-slider-navigation cursor-pointer hidden md:block"
+        >
           <article class="nav-indicator prevArrow">
             <NuxtImg
               v-if="blok.previmage.filename"
@@ -57,11 +59,13 @@ const modules = [Navigation, Pagination];
             <div class="self-end mb-20 md:mb-0 md:self-center px-0 md:px-4">
               <StoryblokHeading
                 class="font-jakarta mt-0 md:mt-3"
-                v-for="heading of value.headings"
+                v-for="(heading, index) of value.headings"
+                :key="index"
                 :heading="heading"
               />
               <StoryblokBtn
-                v-for="button of value.action"
+                v-for="(button, index) of value.action"
+                :key="index"
                 :button="button"
                 class="max-w-[148px] md:max-w-[170px] font-jakarta mt-4 md:mt-10 hidden md:block"
               >
