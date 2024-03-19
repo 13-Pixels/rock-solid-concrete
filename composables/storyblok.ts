@@ -1,6 +1,5 @@
 export const useNavData = () => useState("navData", () => null);
 export const useFooterData = () => useState("footerData", () => null);
-export const useProductsData = () => useState("productData", () => null);
 
 import storyblokApi from "../plugin/useStoryblokApi";
 export async function getNavData() {
@@ -30,16 +29,3 @@ export async function getFooterData() {
   }
 }
 
-export async function getProductsData() {
-  try {
-    const { data } = await storyblokApi.get("cdn/stories/ourProducts", {
-      version: "draft",
-      resolve_links: "url",
-    });
-
-    const productsData = useProductsData();
-    productsData.value = data.story.content;
-  } catch (error) {
-    console.log("error in getting product data", error);
-  }
-}
