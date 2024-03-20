@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { storyblokProducts } from "../types/products";
+import { PropType } from "vue";
+
+const props = defineProps({
+  blok: { type: Object as PropType<storyblokProducts>,default: null },
+});
+</script>
+
 <template>
   <div
     v-editable="blok"
@@ -26,9 +35,3 @@
     </section>
   </div>
 </template>
-
-<script setup>
-const props = defineProps({
-  blok: { type: Object, default: null },
-});
-</script>

@@ -1,8 +1,8 @@
-import { storyblokAsset, storyblokHeadings, storyblokButton } from "../types/storyblokMain";
+import { storyblokAsset, storyblokHeadings, storyblokButton } from "./storyblokMain";
 
 export interface storyblokHeroSection {
-  bgAsset: storyblokAsset;
+  image: storyblokAsset;
   headings: storyblokHeadings[];
   type: "home" | "packages" | "tour";
-  button: storyblokButton[];
+  actions: storyblokButton[];
 }
