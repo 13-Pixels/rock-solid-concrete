@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { downloadHeroSection } from "../types/downloadHeroSection";
+import { PropType } from "vue";
 const props = defineProps({
-  blok: { type: Object, default: null },
+  blok: { type: Object as PropType<downloadHeroSection>, default: null },
 });
 </script>
 <template>

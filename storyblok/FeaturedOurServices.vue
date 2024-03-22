@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { featuredOurServices } from "../types/featuredOurServices";
+import { PropType } from "vue";
+const props = defineProps({
+  blok: { type: Object as PropType<featuredOurServices>, default: null },
+});
+</script>
 <template>
   <div v-editable="blok">
     <!-- heading section -->
@@ -46,9 +53,3 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-  blok: { type: Object, default: null },
-});
-</script>

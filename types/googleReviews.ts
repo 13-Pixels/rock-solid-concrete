@@ -4,8 +4,8 @@ export interface storyblokGoogleReview {
   text1: string;
   text2: string;
   image: storyblokAsset;
-  headings: storyblokHeadings;
-  actions: storyblokButton;
+  headings: storyblokHeadings[];
+  actions: storyblokButton[];
 }
 
 export interface googleReview {
