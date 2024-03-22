@@ -1,9 +1,10 @@
 import { storyblokHeadings , storyblokAsset} from "./storyblokMain"
 
-export interface storyblokKeyBenifits{
+export interface storyblokRockFlow{
     headings: storyblokHeadings[];
     list: listArray[];
     image: storyblokAsset;
+    text: string;
 }
 
 export interface listArray{

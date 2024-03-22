@@ -6,7 +6,7 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div v-editable="blok" class="bg-[#F6F7FA]">
+  <div v-editable="blok" class="bg-bgGray">
     <section class="max-w-[1200px] mx-auto py-14 px-4">
       <!-- our team heading is here -->
       <StoryblokHeading

@@ -3,8 +3,13 @@ import { getInstaPosts } from "../composables/instaFeed";
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 const { slug } = useRoute().params;
-
-const url = slug && slug.length > 0 ? slug.join("/") : "home";
+let slugArray: string[];
+if (typeof slug === 'string') {
+    slugArray = [slug];
+} else {
+    slugArray = slug;
+}
+const url = slug && slug.length > 0 ? slugArray.join("/") : "home";
 
 const isPreview = useRuntimeConfig().public.NODE_ENV !== "production";
 

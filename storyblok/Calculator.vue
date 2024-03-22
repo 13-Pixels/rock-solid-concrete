@@ -14,25 +14,25 @@ const formThreeTotalConcrete = ref(0);
 const formLengthInput = ref(0);
 const formWidthInput = ref(0);
 const formDepthInput = ref(0);
-const formLengthSelect = ref("M"); // Default to 'M'
-const formWidthSelect = ref("M"); // Default to 'M'
-const formDepthSelect = ref("M"); // Default to 'M'
+const formLengthSelect = ref("M");
+const formWidthSelect = ref("M");
+const formDepthSelect = ref("M");
 
 // for second form
 const lengthInput = ref(0);
-const widthInput = ref(0);
+const widthInput = ref(0); ''
 const depthInput = ref(0);
 const quantityInput = ref(0);
-const lengthSelect = ref("M"); // Default to 'M'
-const widthSelect = ref("M"); // Default to 'M'
-const depthSelect = ref("M"); // Default to 'M'
+const lengthSelect = ref("M");
+const widthSelect = ref("M");
+const depthSelect = ref("M");
 
 // for third form
 const formThreeDepthInput1 = ref(0);
 const formThreeDepthInput2 = ref(0);
 const formThreeQuantityInput = ref(0);
-const formThreeDepthSelect1 = ref("M"); // Default to 'M'
-const formThreeDepthSelect2 = ref("M"); // Default to 'M'
+const formThreeDepthSelect1 = ref("M");
+const formThreeDepthSelect2 = ref("M");
 
 const activateTab = (index: number) => {
   activeTab.value = index;
@@ -114,6 +114,7 @@ function getMultiplier(side) {
   }
 }
 
+// functions for reset forms
 function resetFormOne() {
   formLengthInput.value = 0;
   formWidthInput.value = 0;
@@ -277,6 +278,7 @@ function resetFormThree() {
               </select>
             </div>
           </div>
+          <!-- submit and reset buttons here-->
           <div class="flex justify-center gap-3">
             <button
               type="submit"
@@ -303,7 +305,7 @@ function resetFormThree() {
             Total Concrete Needed:
           </h3>
           <p
-            class="w-full bg-[#F6F7FA] p-3 px-5 font-jakarta text-black text-xl mt-4 md:mt-0"
+            class="w-full bg-bgGray p-3 px-5 font-jakarta text-black text-xl mt-4 md:mt-0"
           >
             {{ formOneTotalConcrete.toFixed(2) }} cubic meters
           </p>
@@ -414,6 +416,7 @@ function resetFormThree() {
               />
             </div>
           </div>
+          <!-- submit and reset buttons here-->
           <div class="flex justify-center gap-3">
             <button
               type="submit"
@@ -440,7 +443,7 @@ function resetFormThree() {
             Total Concrete Needed:
           </h3>
           <p
-            class="w-full bg-[#F6F7FA] p-3 px-5 font-jakarta text-black text-xl mt-4 md:mt-0"
+            class="w-full bg-bgGray p-3 px-5 font-jakarta text-black text-xl mt-4 md:mt-0"
           >
             {{ formTwoTotalConcrete.toFixed(2) }} cubic meters
           </p>
@@ -523,6 +526,7 @@ function resetFormThree() {
               />
             </div>
           </div>
+          <!-- submit and reset buttons here-->
           <div class="flex justify-center gap-3">
             <button
               type="submit"
@@ -549,13 +553,13 @@ function resetFormThree() {
             Total Concrete Needed:
           </h3>
           <p
-            class="w-full bg-[#F6F7FA] p-3 px-5 font-jakarta text-black text-xl mt-4 md:mt-0"
+            class="w-full bg-bgGray p-3 px-5 font-jakarta text-black text-xl mt-4 md:mt-0"
           >
             {{ formThreeTotalConcrete.toFixed(2) }} cubic meters
           </p>
         </div>
       </article>
-      
+
     </section>
   </div>
 </template>

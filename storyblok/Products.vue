@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { storyblokProducts } from "../types/products";
 import { PropType } from "vue";
-
 const props = defineProps({
   blok: { type: Object as PropType<storyblokProducts>,default: null },
 });

@@ -13,7 +13,7 @@ const adjustWidth = computed(() => {
 });
 </script>
 <template>
-  <div v-editable="blok" class="bg-[#F6F7FA]">
+  <div v-editable="blok" class="bg-bgGray">
     <!-- service detail page hero section is here -->
     <section class="py-20 lg:pt-32 px-4 max-w-[1100px] mx-auto">
       <StoryblokHeading

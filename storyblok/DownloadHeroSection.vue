@@ -6,7 +6,7 @@ const props = defineProps({
 <template>
   <div v-editable="blok">
     <!-- hero section -->
-    <section class="py-20 lg:pt-32 px-4 bg-[#F6F7FA]">
+    <section class="py-20 lg:pt-32 px-4 bg-bgGray">
       <StoryblokHeading
         class="font-jakarta mt-4 max-w-[960px] mx-auto fixLineHeight"
         v-for="(heading, index) of blok.headings"

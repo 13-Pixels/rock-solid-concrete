@@ -69,6 +69,7 @@
           class="text-[#f6bb06] text-3xl mr-1.5"
           >&#9733;</span
         >
+        {{ review.rating }}
         <p class="text-[#464646] text-base font-jakarta font-normal mt-3 pb-8">
           <template v-if="review.text">
             {{ truncateText(review.text, 24) }}
@@ -89,16 +90,30 @@
   </div>
 </template>
 
-<script setup>
-import { ref, computed } from "vue";
-defineProps({ blok: Object });
-const reviewsData = ref("");
+<script setup lang="ts">
+import { ref, computed , onMounted ,PropType} from "vue";
+import { getReviewsOfGoogle } from '../composables/reviews'
+import { googleReview , storyblokGoogleReview } from "../types/googleReviews";
+
+const props = defineProps({
+  blok: { type: Object as PropType<storyblokGoogleReview>, default: null },
+});
+
+const reviewsData = ref<googleReview[]>([]);
 const limitedReviews = computed(() => reviewsData.value.slice(0, 3));
+
 onMounted(async () => {
   const [res, error] = await getReviewsOfGoogle();
-  reviewsData.value = res.result.reviews;
-  console.log("response", limitedReviews);
+  if (error) {
+    console.error("Error occurred:", error);
+    return;
+  }
+
+  const responseData = res as { result: { reviews: googleReview[] } };
+  reviewsData.value = responseData.result.reviews;
+  console.log("response", limitedReviews.value); // Access the computed property's value directly
 });
+
 
 function truncateText(text, maxWords) {
   const words = text.split(" ");
