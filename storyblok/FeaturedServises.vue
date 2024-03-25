@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { featuredServices } from "../types/featuredServises";
+import { PropType } from "vue";
 const props = defineProps({
-  blok: { type: Object, default: null },
+  blok: { type: Object as PropType<featuredServices>, default: null },
 });
 
 import { Swiper, SwiperSlide } from "swiper/vue";

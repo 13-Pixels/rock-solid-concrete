@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { computed } from "vue";
+
+import { seviceDetailHero } from "../types/seviceDetailHero";
+import { PropType , computed } from "vue";
 const props = defineProps({
-  blok: { type: Object, default: null },
+  blok: { type: Object as PropType<seviceDetailHero>, default: null },
 });
+
 const adjustWidth = computed(() => {
   return [
     {

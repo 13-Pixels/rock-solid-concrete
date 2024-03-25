@@ -6,7 +6,7 @@ export interface storyblokChooseUs{
     image3: storyblokAsset;
     headings: storyblokHeadings[];
     iconBox: chooseIconBoxArray[];
-    actions: storyblokButton
+    actions: storyblokButton[];
 }
 
 export interface chooseIconBoxArray{

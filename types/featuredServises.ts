@@ -1,12 +1,16 @@
-import { storyblokAsset, storyblokButton, storyblokHeadings } from './storyblokMain';
+import { storyblokHeadings , storyblokAsset , storyblokButton} from './storyblokMain';
 
-export interface featuredOurServices{
+export interface featuredServices{
     headings: storyblokHeadings[];
+    previmage: storyblokAsset;
+    nextimage : storyblokAsset;
     services: servicesArray[];
+    actions: storyblokButton[];
 }
 
 export interface servicesArray{
     content: contentObj;
+    title: string;
 }
 
 export interface contentObj{

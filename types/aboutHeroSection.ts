@@ -2,7 +2,7 @@ import { storyblokAsset, storyblokHeadings, storyblokButton} from './storyblokMa
 
 export interface aboutHeroSection{
     headings: storyblokHeadings[];
-    actions:storyblokButton;
+    actions:storyblokButton[];
     image1: storyblokAsset;
     image2: storyblokAsset;
     image3: storyblokAsset;

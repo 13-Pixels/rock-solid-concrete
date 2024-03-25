@@ -69,7 +69,6 @@
           class="text-[#f6bb06] text-3xl mr-1.5"
           >&#9733;</span
         >
-        {{ review.rating }}
         <p class="text-[#464646] text-base font-jakarta font-normal mt-3 pb-8">
           <template v-if="review.text">
             {{ truncateText(review.text, 24) }}

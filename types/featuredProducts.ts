@@ -3,6 +3,7 @@ import { storyblokAsset, storyblokButton, storyblokHeadings } from './storyblokM
 export interface featuredProducts{
     headings: storyblokHeadings[];
     products: productsArray[];
+    actions: storyblokButton[];
 }
 
 export interface productsArray{
@@ -12,6 +13,6 @@ export interface productsArray{
 export interface contentObj{
     image: storyblokAsset;
     headings: storyblokHeadings[];
-    actions: storyblokButton;
+    actions: storyblokButton[];
     subTitle: string;
 }

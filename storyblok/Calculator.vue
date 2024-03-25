@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
+import { calculator} from "../types/calculator"
+import { PropType , ref } from "vue"
 const props = defineProps({
-  blok: { type: Object, default: null },
+  blok: { type: Object as PropType<calculator>, default: null },
 });
 
 const activeTab = ref(1);
@@ -14,7 +14,7 @@ const formThreeTotalConcrete = ref(0);
 const formLengthInput = ref(0);
 const formWidthInput = ref(0);
 const formDepthInput = ref(0);
-const formLengthSelect = ref("M");
+const formLengthSelect = ref("M"); 
 const formWidthSelect = ref("M");
 const formDepthSelect = ref("M");
 
@@ -176,7 +176,7 @@ function resetFormThree() {
                   'mr-2': index < blok.tabs.length - 1,
                 }"
                 v-for="heading of tab.headings"
-                :key="heading.label"
+                :key="heading.text"
                 :heading="heading"
               />
             </div>
