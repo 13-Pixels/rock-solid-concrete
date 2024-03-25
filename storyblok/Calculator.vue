@@ -44,7 +44,7 @@ function submitFormOne() {
   const formDepth = formDepthInput.value;
 
   if (formLength == 0 || formWidth == 0 || formDepth == 0) {
-    alert("Please enter valid numbers for length, width, depth, and quantity.");
+    alert("Please enter valid numbers for length, width and depth.");
     return;
   }
 
@@ -85,7 +85,7 @@ function submitFormThree() {
   const formThreequantity = formThreeQuantityInput.value;
 
   if (formThreedepth1 == 0 || formThreedepth2 == 0 || formThreequantity == 0) {
-    alert("Please enter valid numbers for depth-1 , depth-2 and quantity.");
+    alert("Please enter valid numbers for depths and quantity.");
     return;
   }
 
