@@ -20,7 +20,7 @@ const formDepthSelect = ref("M");
 
 // for second form
 const lengthInput = ref(0);
-const widthInput = ref(0); ''
+const widthInput = ref(0);
 const depthInput = ref(0);
 const quantityInput = ref(0);
 const lengthSelect = ref("M");
