@@ -87,10 +87,10 @@ const modules = [Navigation, Pagination];
   margin-right: 8px !important;
 }
 :deep(.swiper-pagination-bullet-active) {
-  background-color: #ff6c2b !important ; /* Replace with your desired color */
+  background-color: #ff6c2b !important ; 
 }
 :deep(.swiper-pagination) {
-  text-align: left; /* Replace with your desired color */
+  text-align: left; 
   margin-left: 80px;
   margin-bottom: 18px;
 }

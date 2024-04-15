@@ -521,27 +521,27 @@ definePageMeta({
   <div>
     <p>Primary With different sizes and roundness</p>
     <section class="flex gap-5 items-start">
-      <StoryblokBtn v-for="button of primaryButtons" :button="button" />
+      <StoryblokBtn v-for="button of primaryButtons" :button="button" :key="button.label" />
     </section>
 
     <p>Secondary With different sizes and roundness</p>
     <section class="flex gap-5 items-start">
-      <StoryblokBtn v-for="button of secondaryButtons" :button="button" />
+      <StoryblokBtn v-for="button of secondaryButtons" :button="button" :key="button.label"/>
     </section>
 
     <p>Primary Outlined With different sizes and roundness</p>
     <section class="flex gap-5 items-start">
-      <StoryblokBtn v-for="button of primaryOutlinedButtons" :button="button" />
+      <StoryblokBtn v-for="button of primaryOutlinedButtons" :button="button" :key="button.label"/>
     </section>
 
     <p>Tertiary With different sizes and roundness</p>
     <section class="flex gap-5 items-start">
-      <StoryblokBtn v-for="button of tertiaryButtons" :button="button" />
+      <StoryblokBtn v-for="button of tertiaryButtons" :button="button" :key="button.label"/>
     </section>
 
     <p>Icon buttons With different sizes and roundness</p>
     <section class="flex gap-5 items-start">
-      <StoryblokBtn v-for="button of iconButtons" :button="button" />
+      <StoryblokBtn v-for="button of iconButtons" :button="button" :key="button.label"/>
     </section>
 
     <p class="mt-20">Ratings component</p>
@@ -553,7 +553,7 @@ definePageMeta({
     <InputRatings :rating="0" />
 
     <p class="mt-20">Headings Component starts here</p>
-    <StoryblokHeading v-for="heading of headings" :heading="heading" />
+    <StoryblokHeading v-for="heading of headings" :heading="heading" :key="heading.text"/>
   </div>
 </template>
 

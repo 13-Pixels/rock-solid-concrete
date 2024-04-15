@@ -29,12 +29,3 @@ onMounted(() => {
 });
 </script>
 
-<!-- <style scoped>
-.img {
-  background-image: url("../public/images/splash1.gif");
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center top;
-}
-</style> -->

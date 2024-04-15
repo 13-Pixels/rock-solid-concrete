@@ -26,11 +26,6 @@ const props = defineProps({
         <p class="text-[15px] mt-4 text-[#8e9196] max-w-[550px]">
           {{ blok.subTitle }}
         </p>
-        <!-- <StoryblokBtn
-        v-for="button of blok.actions"
-        :button="button"
-        class="max-w-[120px] h-10 pt-2 font-jakarta mt-4"
-      ></StoryblokBtn> -->
       </article>
     </section>
   </div>

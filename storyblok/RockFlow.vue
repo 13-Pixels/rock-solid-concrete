@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 <template>
   <div v-editable="blok" class="py-20 px-4 bg-bgGray">
-    <!-- Rockflow – Constituents and Design Project (content) section -->
+    <!-- Rockflow – Constituents (content) section -->
     <section
       class="flex flex-col gap-20 lg:flex-row md:max-w-[1110px] md:mx-auto md:items-center"
     >
